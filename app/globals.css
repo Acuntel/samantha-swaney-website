@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-fraunces: "Fraunces", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #ffffff;
+}
+
+body {
+  background: #ffffff;
+  color: #1a1219;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: #2b0a14;
+  color: #ffffff;
+}
+
+@layer components {
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+  .container-x {
+    @apply mx-auto max-w-container container-px;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-medium text-cream-50 shadow-card transition hover:bg-navy-700 active:scale-[0.98];
+    letter-spacing: 0.02em;
+  }
+  .btn-brass {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-medium text-cream-50 shadow-card transition hover:bg-teal-600 active:scale-[0.98];
+    letter-spacing: 0.02em;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy/20 bg-transparent px-6 py-3 text-sm font-medium text-navy transition hover:border-navy hover:bg-navy hover:text-cream-50;
+    letter-spacing: 0.02em;
+  }
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-medium text-cream-50 transition hover:bg-navy-900 active:scale-[0.98];
+    letter-spacing: 0.02em;
+  }
+
+  .h-eyebrow {
+    @apply text-[10.5px] font-medium uppercase text-teal-700;
+    letter-spacing: 0.22em;
+  }
+  .h-display {
+    @apply font-serif text-[40px] sm:text-[52px] lg:text-[64px] font-normal text-navy tracking-tighter2 leading-[1.04];
+  }
+  .h-section {
+    @apply font-serif text-[28px] sm:text-[34px] lg:text-[44px] font-normal text-navy tracking-tighter2 leading-[1.08];
+  }
+  .lede {
+    @apply text-[16.5px] sm:text-[17.5px] leading-[1.7] text-ink/75 font-light;
+  }
+
+  .card {
+    @apply rounded-2xl bg-cream-50 border border-line/60 shadow-soft transition hover:shadow-card;
+  }
+  .card-lift {
+    @apply rounded-2xl bg-cream-50 border border-line/60 shadow-card transition hover:shadow-cardHover hover:-translate-y-0.5;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-[11px] font-medium text-teal-700 uppercase;
+    letter-spacing: 0.12em;
+  }
+  .chip-outline {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-transparent px-3 py-1 text-[11px] font-medium text-navy uppercase;
+    letter-spacing: 0.12em;
+  }
+  .divider {
+    @apply h-px w-full bg-line;
+  }
+  .rule {
+    @apply h-px bg-gradient-to-r from-transparent via-teal/40 to-transparent;
+  }
+}
+
+@layer utilities {
+  .italic-emph {
+    font-style: italic;
+    font-feature-settings: "ss01";
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gold-underline {
+    background-image: linear-gradient(transparent 90%, #c8102e 90%);
+    background-position: 0 95%;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+  }
+}
+
+/* Faint paper grain on hero/section backgrounds */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.169 0 0 0 0 0.039 0 0 0 0 0.078 0 0 0 0.9 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+}

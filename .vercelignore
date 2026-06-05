@@ -1,0 +1,23 @@
+# Standard ignores (mirror .gitignore — a .vercelignore overrides the
+# .gitignore fallback, so these must be repeated here).
+node_modules
+.next
+out
+.env
+.env.local
+.env*.local
+.vercel
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Abandoned Supabase-admin experiment (untracked, unused, breaks the build).
+# The live admin uses the JSON export-to-publish model, not these files.
+# Excluded from deploys so the remote `next build` stays clean.
+lib/supabase.ts
+lib/auth.ts
+app/api/admin
+app/api/properties
+app/admin/AdminDashboard.tsx
+app/admin/login
+components/admin/PropertyForm.tsx
