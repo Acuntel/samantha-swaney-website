@@ -15,10 +15,10 @@ export default function HomePage() {
       <JsonLd data={faqPageSchema(FAQS)} />
       <Hero />
       <Stats />
-      <FeaturedListings />
       <Neighborhoods />
-      <Testimonials />
+      <FeaturedListings />
       <BlogPreview />
+      <Testimonials />
       <FAQ />
       <ContactSection />
     </>

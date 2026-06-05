@@ -22,8 +22,8 @@ export default function FeaturedListings() {
               <span className="italic-emph text-teal-600">Listings</span>
             </h2>
             <p className="lede mt-4 max-w-xl">
-              A curated look at Samantha's current and recent inventory across the
-              western suburbs.
+              A curated look at Samantha's current and recent inventory across
+              Elmhurst and the near-west Cook County suburbs.
             </p>
           </div>
           <Link

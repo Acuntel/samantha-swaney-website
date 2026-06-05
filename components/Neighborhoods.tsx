@@ -6,7 +6,7 @@ export default function Neighborhoods() {
   return (
     <section
       id="neighborhoods"
-      className="relative bg-cream-200 border-y border-line/60"
+      className="relative bg-blush-100 border-y border-line/60"
     >
       <div className="grain absolute inset-0 pointer-events-none" />
       <div className="relative container-x py-24 lg:py-32">
@@ -20,8 +20,9 @@ export default function Neighborhoods() {
             <span className="italic-emph text-teal-600">Neighborhoods</span>
           </h2>
           <p className="lede mt-4">
-            Samantha has closed transactions in every corner of the western
-            suburbs. Here are the markets she knows block by block.
+            Samantha works Elmhurst and the near-west Cook County suburbs, plus
+            her northwest-suburban home base. Here are the markets she knows
+            block by block.
           </p>
         </div>
 

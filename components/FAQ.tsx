@@ -7,7 +7,7 @@ import { Plus, Minus } from "lucide-react";
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="bg-cream-50">
+    <section className="bg-blush-50">
       <div className="container-x py-24 lg:py-32 grid lg:grid-cols-[1fr_1.5fr] gap-14 lg:gap-20">
         <div>
           <div className="flex items-center gap-3">

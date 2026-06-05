@@ -9,11 +9,11 @@
 
 html {
   scroll-behavior: smooth;
-  background: #ffffff;
+  background: #fcf3f3;
 }
 
 body {
-  background: #ffffff;
+  background: #fcf3f3;
   color: #1a1219;
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
@@ -49,6 +49,23 @@ body {
   .btn-navy {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-medium text-cream-50 transition hover:bg-navy-900 active:scale-[0.98];
     letter-spacing: 0.02em;
+  }
+  /* Vivid crimson CTA — the loudest red button, for primary actions. */
+  .btn-crimson {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-medium text-cream-50 shadow-card transition hover:bg-teal-700 active:scale-[0.98];
+    letter-spacing: 0.02em;
+  }
+
+  /* Bold red section bands. */
+  .band-oxblood {
+    background:
+      radial-gradient(120% 140% at 85% 0%, #471225 0%, transparent 55%),
+      linear-gradient(160deg, #2b0a14 0%, #1b0610 100%);
+  }
+  .band-crimson {
+    background:
+      radial-gradient(110% 130% at 15% 10%, #8f0a20 0%, transparent 55%),
+      linear-gradient(150deg, #2b0a14 0%, #7e2342 60%, #c8102e 140%);
   }
 
   .h-eyebrow {

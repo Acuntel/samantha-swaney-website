@@ -8,7 +8,7 @@ export default function BlogPreview() {
   if (posts.length === 0) return null;
 
   return (
-    <section id="blog" className="bg-cream-100 border-t border-line">
+    <section id="blog" className="bg-blush-100 border-y border-line">
       <div className="container-x py-24 lg:py-32">
         <div className="flex items-end justify-between gap-6 mb-12">
           <div>
@@ -21,8 +21,9 @@ export default function BlogPreview() {
               from someone who lives it
             </h2>
             <p className="lede mt-4 max-w-xl">
-              Honest guides on buying, selling, and settling into the western
-              Chicago suburbs. No fluff, just what actually matters.
+              Honest guides on buying, selling, and settling into Elmhurst and
+              the near-west Cook County suburbs. No fluff, just what actually
+              matters.
             </p>
           </div>
           <Link

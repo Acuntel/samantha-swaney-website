@@ -32,18 +32,28 @@ const config: Config = {
           300: "#EC8F9C",
           50: "#FBE9EC",
         },
-        // Crisp whites with a faint cool cast — gallery-white base.
-        sand: "#F6F6F8",
+        // Warm cool-rose neutrals. The "cream" ramp is intentionally tinted
+        // toward a soft blush so no section reads as stark white; cards sit on
+        // near-white cream-50 and pop against the rosier section backgrounds.
+        sand: "#FAEEEF",
         cream: {
-          50: "#FFFFFF",
-          100: "#F8F8FA",
-          200: "#EFF0F3",
-          300: "#E4E5EA",
-          400: "#CFD1D8",
+          50: "#FFFCFC",
+          100: "#FBEFF0",
+          200: "#F5E1E4",
+          300: "#ECD0D4",
+          400: "#DDB9BF",
+        },
+        // Dedicated blush band tints for deliberately colorful sections.
+        blush: {
+          DEFAULT: "#F6E7EA",
+          50: "#FCF3F4",
+          100: "#F8E9EC",
+          200: "#F1D6DB",
+          300: "#E7BFC6",
         },
         ink: "#1A1219",
-        mute: "#8A8489",
-        line: "#E4E5EA",
+        mute: "#9A8A8E",
+        line: "#EBD9DD",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
