@@ -79,13 +79,13 @@ number to win a listing.
 ## Blog
 First-hand local guides, grounded in real local facts:
 - Moving to Elmhurst, IL: A Local Broker's Neighborhood Guide
-  https://samantha-swaney-website.vercel.app/blog/moving-to-elmhurst-neighborhood-guide
+  https://samantha-swaney-site.vercel.app/blog/moving-to-elmhurst-neighborhood-guide
 - Elmhurst vs. Oak Park vs. La Grange: Which Near-West Suburb Fits You?
-  https://samantha-swaney-website.vercel.app/blog/elmhurst-vs-oak-park-vs-la-grange
+  https://samantha-swaney-site.vercel.app/blog/elmhurst-vs-oak-park-vs-la-grange
 - What's My Home Worth in the Western Cook County Suburbs? How I Price a Home to Sell
-  https://samantha-swaney-website.vercel.app/blog/whats-my-home-worth-western-cook-suburbs
+  https://samantha-swaney-site.vercel.app/blog/whats-my-home-worth-western-cook-suburbs
 - First-Time Home Buyer in Cook County: What to Expect, Step by Step
-  https://samantha-swaney-website.vercel.app/blog/first-time-buyer-cook-county
+  https://samantha-swaney-site.vercel.app/blog/first-time-buyer-cook-county
 
 ## Contact
 - Phone / text: (630) 532-8747 (office (630) 587-7400)

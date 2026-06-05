@@ -28,7 +28,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
-      "https://samantha-swaney-website.vercel.app",
+      "https://samantha-swaney-site.vercel.app",
   ),
   title: {
     default: `${SAMANTHA.name} | Real Estate Broker in ${SAMANTHA.market}`,

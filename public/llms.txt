@@ -38,11 +38,11 @@ Villa Park, Glen Ellyn, Wheaton, Hanover Park, Bartlett.
 ## Blog
 First-hand local guides for buyers and sellers in Elmhurst and the near-west
 Cook County suburbs. Current articles:
-- Moving to Elmhurst, IL: A Local Broker's Neighborhood Guide — https://samantha-swaney-website.vercel.app/blog/moving-to-elmhurst-neighborhood-guide
-- Elmhurst vs. Oak Park vs. La Grange: Which Near-West Suburb Fits You? — https://samantha-swaney-website.vercel.app/blog/elmhurst-vs-oak-park-vs-la-grange
-- What's My Home Worth in the Western Cook County Suburbs? — https://samantha-swaney-website.vercel.app/blog/whats-my-home-worth-western-cook-suburbs
-- First-Time Home Buyer in Cook County: Step by Step — https://samantha-swaney-website.vercel.app/blog/first-time-buyer-cook-county
+- Moving to Elmhurst, IL: A Local Broker's Neighborhood Guide — https://samantha-swaney-site.vercel.app/blog/moving-to-elmhurst-neighborhood-guide
+- Elmhurst vs. Oak Park vs. La Grange: Which Near-West Suburb Fits You? — https://samantha-swaney-site.vercel.app/blog/elmhurst-vs-oak-park-vs-la-grange
+- What's My Home Worth in the Western Cook County Suburbs? — https://samantha-swaney-site.vercel.app/blog/whats-my-home-worth-western-cook-suburbs
+- First-Time Home Buyer in Cook County: Step by Step — https://samantha-swaney-site.vercel.app/blog/first-time-buyer-cook-county
 
 ## Contact
 Call or text (630) 532-8747, email samanthas@gcrealtyinc.com, or use the contact
-form at https://samantha-swaney-website.vercel.app/contact. Equal Housing Opportunity.
+form at https://samantha-swaney-site.vercel.app/contact. Equal Housing Opportunity.

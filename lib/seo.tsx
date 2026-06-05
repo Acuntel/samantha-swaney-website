@@ -14,7 +14,7 @@ import { stripMarkdown } from "./markdown";
 
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://samantha-swaney-website.vercel.app"
+  "https://samantha-swaney-site.vercel.app"
 ).replace(/\/$/, "");
 
 export function canonical(path = "/"): string {

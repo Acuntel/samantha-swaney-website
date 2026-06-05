@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 
     const subject = `New Website Inquiry: ${name} (${intent || "General"})`;
     const text = [
-      `New inquiry from samantha-swaney-website.vercel.app`,
+      `New inquiry from samantha-swaney-site.vercel.app`,
       ``,
       `Name: ${name}`,
       `Email: ${email}`,
