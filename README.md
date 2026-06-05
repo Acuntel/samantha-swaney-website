@@ -1,61 +1,60 @@
 # Samantha Swaney Real Estate Website
 
-A custom Next.js site for **Samantha Swaney**, Real Estate Broker serving Elmhurst and the near-west Chicago suburbs. Built by Brady for delivery to Samantha.
+A custom Next.js site for **Samantha Swaney**, Real Estate Broker with GC Realty & Development serving Elmhurst and the near-west Cook County suburbs. Built by Brady for delivery to Samantha.
 
 ## What's inside
 
-- **Next.js 14 + TypeScript + Tailwind** — fast, SEO-friendly, easy to maintain.
-- **Multilingual AI chatbot** (Anthropic Claude) — auto-detects language; explicit EN / ES / PL picker. Every conversation is summarized in English and emailed to Samantha.
-- **Autonomous property management** — Samantha logs into `/admin` and adds / edits / removes listings with photo uploads. No code, no Brady-required.
-- **Supabase** stores listings + photos. **Resend** sends lead emails. **Vercel** hosts.
+- **Next.js 14 + TypeScript + Tailwind** — fast, SEO-friendly, easy to maintain. Cool-red / oxblood palette.
+- **Self-serve listings + blog** — Samantha logs into `/admin` (password `1111`) and edits listings and blog posts in the browser, then clicks **Export to publish**. No database, no code.
+- **JSON-in-repo content** — listings live in `public/data/properties.json`, blog posts in `public/data/blog.json`, both committed to the repo and read at build time.
+- **Contact form → Resend** emails leads straight to Samantha. No AI chatbot.
+- **Full SEO / AI layer** — per-page metadata, schema.org JSON-LD, dynamic sitemap, AI-crawler-friendly `robots.txt`, and `llms.txt` / `llms-full.txt`.
 
 ## Local setup
 
 ```bash
 npm install
-cp ENV_SETUP.md → create .env.local from the block at the top
+# create .env.local from the block in ENV_SETUP.md
 npm run dev
 ```
 
-See `ENV_SETUP.md` for the full env var block and one-time setup steps for Supabase, Resend, and Anthropic.
+See `ENV_SETUP.md` for the env var block (Resend + site URL) and one-time setup.
 
 ## Architecture
 
 ```
 app/
-  page.tsx              Homepage (hero → stats → listings → neighborhoods → testimonials → FAQ → contact)
-  listings/             Public listings (filterable) + detail
-  about/                Samantha's bio + team + areas served
+  page.tsx              Homepage (hero → stats → neighborhoods → listings → blog → testimonials → FAQ → contact)
+  listings/             Public listings (filterable) + per-listing detail pages
+  blog/                 Blog index + per-post pages (Markdown)
+  neighborhoods/[slug]/ Local-SEO town landing pages
+  about/                Samantha's bio + GC Realty advantage + areas served
   contact/              Contact form (Resend → Samantha)
-  admin/                Password-gated dashboard + property form
-  api/
-    chat/               Claude streaming endpoint
-    chat/lead/          Resend transcript email (summarized to English)
-    contact/            Contact form → Resend
-    properties/         Public read-only listings JSON
-    admin/login/        Password verify → httpOnly HMAC cookie
-    admin/logout/
-    admin/properties/   CRUD (auth-gated)
-    admin/upload/       Photo upload → Supabase Storage
+  admin/                Password-gated (1111) tabbed editor: Listings | Blog
+  api/contact/          Contact form → Resend
+  sitemap.ts robots.ts icon.tsx
 components/
-  Hero / Stats / FeaturedListings / Neighborhoods / Testimonials / FAQ / ContactSection
-  PropertyCard / Nav / Footer / ChatWidget
-  admin/PropertyForm
+  Hero / Stats / FeaturedListings / Neighborhoods / Testimonials / BlogPreview / FAQ / ContactSection
+  PropertyCard / BlogCard / Nav / Footer / PageLoader
+  admin/AdminTabs / PropertyEditor / PropertyRow / BlogEditor / BlogRow
 lib/
-  samantha-data.ts          Single source of truth — bio, stats, FAQs, testimonials
-  chatbot-system-prompt  Compiles Samantha's data into the chatbot system prompt
-  chat-translations.ts   EN / ES / PL UI strings + language directive
-  supabase.ts            Server clients + seed-fallback fetch
-  auth.ts                Admin cookie HMAC + password check (timing-safe)
-  rate-limit.ts          In-memory per-IP throttle
-supabase-schema.sql      One-time DB schema
-ENV_SETUP.md             Env var docs + one-time setup checklist
+  samantha-data.ts      Single source of truth — bio, stats, FAQs, neighborhoods, SEO facts
+  properties.ts blog.ts Read helpers for the JSON content
+  seo.tsx               Canonical URLs + schema.org JSON-LD generators
+  markdown.tsx          Dependency-free Markdown renderer for blog bodies
+  download.ts date.ts rate-limit.ts
+public/
+  data/properties.json  Listings (managed via /admin)
+  data/blog.json        Blog posts (managed via /admin)
+  images/               Headshot, neighborhood photos, listing photos
+  llms.txt llms-full.txt
+ENV_SETUP.md            Env var docs + one-time setup checklist
 ```
 
 ## Deploy
 
-GitHub repo is wired up via `gh repo create`, deployed to Vercel with `vercel`. Env vars must be added in Vercel project settings before chat / admin work.
+GitHub repo is `Acuntel/samantha-swaney-website`. **Deploys are manual** (the repo is not Vercel-auto-connected): from the project directory run `npx vercel --prod --yes`. Set env vars in the Vercel project settings.
 
 ## Updating Samantha's data
 
-Most copy lives in `lib/samantha-data.ts`. The chatbot reads from the same file via `lib/chatbot-system-prompt.ts`, so updating bio / stats / testimonials / FAQs there automatically updates the homepage AND the chatbot's knowledge.
+Most copy lives in `lib/samantha-data.ts` (bio, stats, FAQs, neighborhoods). Listings and blog posts are managed from `/admin`. Everything is static and rebuilt on deploy.

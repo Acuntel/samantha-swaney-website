@@ -3,7 +3,6 @@ import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import PageLoader from "@/components/PageLoader";
 import { SAMANTHA } from "@/lib/samantha-data";
 import {
@@ -75,7 +74,6 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <ChatWidget />
       </body>
     </html>
   );

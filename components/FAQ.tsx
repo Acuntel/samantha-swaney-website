@@ -19,7 +19,7 @@ export default function FAQ() {
           </h2>
           <p className="lede mt-4">
             The questions Samantha hears the most, answered straight. Don't see
-            yours? Use the chat bubble or call {`(630) 532-8747`}.
+            yours? Call or text {`(630) 532-8747`}.
           </p>
         </div>
 

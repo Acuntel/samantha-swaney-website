@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SAMANTHA } from "@/lib/samantha-data";
-import { Phone, Mail, MessageSquare, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -42,11 +42,6 @@ export default function ContactSection() {
           </div>
           <div className="space-y-3">
             <ContactRow
-              icon={<MessageSquare size={16} />}
-              title="Chat anytime"
-              body="Multilingual AI assistant, bottom-right of every page"
-            />
-            <ContactRow
               icon={<Phone size={16} />}
               title="Call or text"
               body={SAMANTHA.phone}
@@ -55,6 +50,11 @@ export default function ContactSection() {
               icon={<Mail size={16} />}
               title="Email"
               body={SAMANTHA.email}
+            />
+            <ContactRow
+              icon={<MapPin size={16} />}
+              title="Office"
+              body={SAMANTHA.office}
             />
           </div>
         </div>
