@@ -55,10 +55,10 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-line bg-cream-50">
-        <div className="container-x py-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="container-x py-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {STATS.map((s) => (
-            <div key={s.label}>
-              <div className="text-3xl font-semibold tracking-tightish text-navy">
+            <div key={s.label} className="min-w-0">
+              <div className="text-2xl sm:text-3xl font-semibold tracking-tightish text-navy break-words">
                 {s.value}
               </div>
               <div className="text-xs uppercase tracking-[0.16em] text-mute mt-1">

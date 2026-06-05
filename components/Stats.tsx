@@ -11,15 +11,15 @@ export default function Stats() {
             {SAMANTHA.brokerage}
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-9 gap-x-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-9 gap-x-6">
           {STATS.map((s, i) => (
             <div
               key={s.label}
-              className={`${
-                i > 0 ? "md:border-l md:border-cream-50/15 md:pl-6" : ""
+              className={`min-w-0 ${
+                i > 0 ? "lg:border-l lg:border-cream-50/15 lg:pl-6" : ""
               }`}
             >
-              <div className="font-serif text-[30px] sm:text-[38px] font-normal text-cream-50 tracking-tighter2 leading-[1.05]">
+              <div className="font-serif text-[23px] sm:text-[27px] lg:text-[30px] font-normal text-cream-50 tracking-tighter2 leading-[1.12] break-words">
                 {s.value}
               </div>
               <div className="mt-2.5 text-[10.5px] uppercase tracking-[0.2em] text-cream-50/55">
